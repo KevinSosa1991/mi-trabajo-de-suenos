@@ -1,0 +1,117 @@
+/* ----- Variables simples ----- */
+:root{
+  --bg: #0f172a;          /* fondo principal (azul gris muy oscuro) */
+  --card: #111827;        /* tarjetas */
+  --acento: #38bdf8;      /* cian profesional */
+  --texto: #e5e7eb;       /* texto claro */
+  --suave: #94a3b8;       /* gris suave */
+}
+
+/* ----- Reset básico ----- */
+*{ box-sizing: border-box; margin: 0; padding: 0; }
+html, body{ height: 100%; }
+body{
+  background: linear-gradient(180deg, var(--bg), #0b1220 60%);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.6;
+}
+
+/* ----- Contenedor ----- */
+#contenedor{
+  width: min(1100px, 92%);
+  margin: 40px auto;
+  padding: 16px;
+}
+
+/* ----- Secciones ----- */
+.seccion{ margin: 24px 0; }
+
+#hero{
+  background: radial-gradient(circle at 20% 0%, rgba(56,189,248,.15), transparent 50%),
+              radial-gradient(circle at 80% 30%, rgba(56,189,248,.08), transparent 55%);
+  padding: 28px;
+  border: 1px solid rgba(56,189,248,.25);
+  border-radius: 16px;
+}
+
+/* ----- Títulos y textos ----- */
+h1{
+  font-size: clamp(28px, 5vw, 42px);
+  letter-spacing: .5px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+h2{
+  font-size: clamp(20px, 3.5vw, 28px);
+  margin-bottom: 10px;
+  color: #eaf7ff;
+}
+.intro{ color: var(--suave); max-width: none; margin-bottom: 16px; }
+.resaltado{ color: var(--acento); font-weight: 600; }
+
+/* ----- Imagen ----- */
+.imagen-box{
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+.imagen-hero{
+  width: 100%;
+  max-width: 920px;  /* Width aplicado */
+  height: 340px;     /* Height aplicado */
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(56,189,248,.25);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* ----- Card genérica ----- */
+.card{
+  background: var(--card);
+  border: 1px solid rgba(148,163,184,.2);
+  border-radius: 14px;
+  padding: 18px 20px;   /* Padding aplicado */
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+}
+
+/* ----- Lista ----- */
+.lista{
+  margin-left: 18px;    /* Margin aplicado */
+}
+.lista li{
+  margin: 8px 0;
+}
+
+/* ----- Tabla ----- */
+.tabla-wrap{
+  overflow-x: auto;
+  margin-top: 8px;
+}
+.tabla{
+  width: 100%;
+  border-collapse: collapse;
+  background: #0b1324;
+  border: 1px solid rgba(148,163,184,.25);
+}
+.tabla th, .tabla td{
+  padding: 12px 14px;           /* Padding aplicado */
+  border-bottom: 1px solid rgba(148,163,184,.18);
+  text-align: left;
+  vertical-align: top;
+}
+.tabla th{
+  background: rgba(56,189,248,.12);
+  color: #dff6ff;
+  font-weight: 700;
+}
+.tabla tr:hover{
+  background: rgba(56,189,248,.06);
+}
+
+/* ----- Pie ----- */
+#pie .nota{
+  color: var(--suave);
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
